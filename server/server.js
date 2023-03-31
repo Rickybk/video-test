@@ -10,6 +10,13 @@ app.use(cors())
 app.use(express.json())
 
 // add new todo
+app.get('/time', async (req, res) =>{
+  const time = await pool.query(
+    `SELECT now()`
+  )
+})
+
+
 app.get('/',  (req, res) => {
   res.send('Hello World!')
 })
