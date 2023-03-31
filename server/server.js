@@ -14,6 +14,7 @@ app.get('/time', async (req, res) =>{
   const time = await pool.query(
     `SELECT now()`
   )
+  res.json(time.rows);
 })
 
 
