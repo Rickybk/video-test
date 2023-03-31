@@ -1,4 +1,4 @@
-const PORT = process.env.PORT ?? 8000
+const PORT = 8000
 const express = require('express')
 const cors = require('cors')
 const app = express()
@@ -10,6 +10,10 @@ app.use(cors())
 app.use(express.json())
 
 // add new todo
+app.get('/',  (req, res) => {
+  res.send('Hello World!')
+})
+
 app.post('/todos', async (req, res) => {
   try {
     const { user_email, title, progress, date } = req.body
