@@ -9,7 +9,5 @@ const pool = new Pool({
   database: 'dbstore'
 })
 
-//Dorian imbecil
-
 module.exports = pool
 
